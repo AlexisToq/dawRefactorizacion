@@ -1,12 +1,14 @@
+import java.time.LocalDate;
+
 /**
  * Representa una reserva en el sistema.
  * Contiene información sobre la pista reservada, la fecha y la duración de la reserva.
  * 
  * @author [Cristhian Alexis Garcia Hernandez]
  */
-public class Reserva {
+class Reserva {
     private int idPista;
-    private String fecha;
+    private LocalDate fecha;
     private int duracion;
 
     /**
@@ -16,7 +18,7 @@ public class Reserva {
      * @param fecha    Fecha de la reserva.
      * @param duracion Duración de la reserva en horas.
      */
-    public Reserva(int idPista, String fecha, int duracion) {
+    public Reserva(int idPista, LocalDate fecha, int duracion) {
         this.idPista = idPista;
         this.fecha = fecha;
         this.duracion = duracion;
@@ -34,9 +36,9 @@ public class Reserva {
     /**
      * Obtiene la fecha de la reserva.
      * 
-     * @return La fecha de la reserva en formato String.
+     * @return La fecha de la reserva.
      */
-    public String getFecha() {
+    public LocalDate getFecha() {
         return fecha;
     }
 
@@ -49,4 +51,3 @@ public class Reserva {
         return duracion;
     }
 }
-
